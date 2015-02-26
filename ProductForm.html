@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tyson App CMS</title>
+	 <link rel="stylesheet" href="/FAncySlidingForm/css/style.css" type="text/css" media="screen"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="/FAncySlidingForm/sliding.form.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+<div id="content">
+<div id="wrapper">
+<div id="steps">
+<form action="" method="get" accept-charset="utf-8">
+	<fieldset class="step">
+		<legend>Producto</legend>
+		<p>
+			<label for="name">Nombre:</label>
+			<input type="text" name="pName" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pCodigo">Codigo:</label>
+			<input type="text" name="pCodigo" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pDesc">Descripcion:</label>
+			<textarea name="pDesc" cols="150" rows="5"></textarea>
+		</p>
+	</fieldset>	
+	<fieldset class="step">
+	<legend>Detalles</legend>
+		<p>
+			<label for="pPeso">Peso</label>
+			<input type="text" name="pPeso" value="">
+		</p>
+		<p>
+			<label for="pIng">Ingredientes:</label>
+			<textarea name="pIng" cols="150" rows="10"></textarea>
+		</p>
+		<p>
+			<label for="pCont">contiene:</label>
+			<textarea name="pCont" cols="150" rows="10"></textarea>
+		</p>
+		<p>
+			<label for="pIdeal">Ideal Para:</label>
+			<input type="text" name="pIdeal" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pValor">Escala de Valor:</label>
+			<input type="text" name="pValor" value="" placeholder="">
+		</p>
+	</fieldset>	
+	<fieldset class="step">
+	<legend>Empaque</legend>
+		<p>
+			<label for="pPaqPrim">Empaque Primario:</label>
+			<input type="text" name="pPaqPrim" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pPaqSec">Empaque Secundario:</label>
+			<input type="text" name="pPaqSec" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pCodPrim">Codificaion Primaria:</label>
+			<input type="text" name="pCodPrim" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pVCodSec">Codificacion Secundaria:</label>
+			<input type="text" name="pCodSec" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pPallet">Pallet:</label>
+			<input type="text" name="pPallet" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pManejo">Condiciones de Manejo:</label>
+			<input type="text" name="pManejo" value="" placeholder="">
+		</p>
+	</fieldset>	
+	<fieldset class="step">
+		<legend>Almacenamiento</legend>
+		<p>
+			<label for="pValor">Escala de Valor:</label>
+			<input type="text" name="pValor" value="" placeholder="">
+		</p>
+	</fieldset>
+</form>
+</div>
+<div id="navigation" style="display:none;">
+                    <ul>
+                        <li class="selected">
+                            <a href="#">Producto</a>
+                        </li>
+                        <li>
+                            <a href="#">Ingredientes</a>
+                        </li>
+                        <li>
+                            <a href="#">Empaque</a>
+                        </li>
+                        <li>
+                        	<a href="#">Almacenamiento</a>
+                        </li>
+                    
+                    </ul>
+                </div>
+	
+</div>
+</div>
+</body>
+</html>
