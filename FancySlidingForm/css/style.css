@@ -11,7 +11,7 @@ body{
 #content{
     margin:15px auto;
     text-align:center;
-    width:600px;
+    width:800px;
     position:relative;
     height:100%;
 }
@@ -24,17 +24,17 @@ body{
     border-radius:10px;
     border:2px solid #fff;
     background-color:#f9f9f9;
-    width:600px;
+    width:800px;
     overflow:hidden;
 }
 #steps{
-    width:600px;
+    width:800px;
 	/*height:320px;*/
     overflow:hidden;
 }
 .step{
     float:left;
-    width:600px;
+    width:800px;
 	/*height:320px;*/
 }
 #navigation{
@@ -123,7 +123,7 @@ span.error{
     text-shadow:1px 1px 1px #fff;
     font-weight:bold;
     float:left;
-    width:590px;
+    width:790px;
     padding:5px 0px 5px 10px;
     margin:10px 0px;
     border-bottom:1px solid #fff;
@@ -135,7 +135,7 @@ span.error{
     margin:5px 0px;
     background-color:#f4f4f4;
     border:1px solid #fff;
-    width:400px;
+    width:600px;
     padding:10px;
     margin-left:100px;
     -moz-border-radius: 5px;
@@ -165,7 +165,7 @@ span.error{
     border-radius: 3px;
     outline: none;
     padding: 5px;
-    width: 200px;
+    width: 400px;
     float:left;
 }
 #steps form input:focus{

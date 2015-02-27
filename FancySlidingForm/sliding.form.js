@@ -40,12 +40,15 @@ $(function() {
 		var $this	= $(this);
 		var prev	= current;
 		$this.closest('ul').find('li').removeClass('selected');
+	
         $this.parent().addClass('selected');
+
 		/*
 		we store the position of the link
 		in the current variable	
 		*/
 		current = $this.parent().index() + 1;
+
 		/*
 		animate / slide to the next or to the corresponding
 		fieldset. The order of the links in the navigation

@@ -10,7 +10,7 @@
 <div id="content">
 <div id="wrapper">
 <div id="steps">
-<form action="" method="get" accept-charset="utf-8">
+<form id="formElem" action="" method="get" accept-charset="utf-8">
 	<fieldset class="step">
 		<legend>Producto</legend>
 		<p>
@@ -79,9 +79,44 @@
 	<fieldset class="step">
 		<legend>Almacenamiento</legend>
 		<p>
-			<label for="pValor">Escala de Valor:</label>
-			<input type="text" name="pValor" value="" placeholder="">
+			<label for="pVdAnaqul">Vida de Anaquel:</label>
+			<input type="text" name="pVdAnaqul" value="" placeholder="">
 		</p>
+		<p>
+			<label for="pTemp">Temperatura de Congelacion:</label>
+			<input type="text" name="pTemp" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pApInt">Apariencia Interior:</label>
+			<input type="text" name="pApInt" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pApExt">Apariencia Exterior:</label>
+			<input type="text" name="pApExt" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pColor">Color:</label>
+			<input type="text" name="pColor" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pOlor">Olor:</label>
+			<input type="text" name="pOlor" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pSabor">Sabor:</label>
+			<input type="text" name="pSabor" value="" placeholder="">
+		</p>
+		<p>
+			<label for="pMetRec">Metodos de Reconstitucion:</label>
+			<input type="text" name="pMetRec" value="" placeholder="">
+		</p>
+
+	</fieldset>
+	<fieldset class="step">
+		<legend>Confirmar</legend>
+		<p class="submit">
+        	<button id="registerButton" type="submit">Register</button>
+        </p>
 	</fieldset>
 </form>
 </div>
@@ -98,6 +133,9 @@
                         </li>
                         <li>
                         	<a href="#">Almacenamiento</a>
+                        </li>
+                        <li>
+                        	<a href="#">Confirmar</a>
                         </li>
                     
                     </ul>
