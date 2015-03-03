@@ -70,7 +70,7 @@ class Producto {
 		$this->cmanejo=$manejo;
 	}
 	public function set_vidaAnaquel($vAnaquel){
-		$tthis->vanaquel=$vAnaquel;
+		$this->vanaquel=$vAnaquel;
 	}
 	public function set_congelacion($congelacion){
 		$this->tempcong=$congelacion;
@@ -88,10 +88,33 @@ class Producto {
 		$this->olor=$olor;
 	}
 	public function set_sabor($sabor){
-		$this->sabor=$saber;
+		$this->sabor=$sabor;
 	}
-	public function set_constitucio($constitucion){
+	public function set_constitucion($constitucion){
 		$this->reconstitucion=$constitucion;
+	}
+
+	public function saveNewProduct(){
+		$server="162.144.32.74";
+		$user="multimh2_tysnusr";
+		$pass="Tyson4pp2015";
+		$database="multimh2_tysonapp";
+
+		$mysqli=new mysqli($server, $user, $pass, $database);
+		
+		$sql ="INSERT INTO `multimh2_tysonapp`.`productos` 
+		(`id_producto`, `nombre`, `descripcion`, `codigo`, `peso`, `ingredientes`, `contiene`, `ideal`, `escalavalor`,
+		 `vidaanaquel`, `temperaturacongelacion`, `aparienciainterna`, `aparienciaexterna`, `color`, `olor`, `sabor`, `metodosderecostitucion`,
+		  `empaqueprimario`, `empaquesecundario`, `codificacionprimaria`, `codificacionsecundaria`, `pallet`, `condicionesmanejo`, `categoria`) 
+		VALUES 
+		('', $this->nombre , $this->descripcion, $this->codigo,$this->peso, $this->ingredientes, $this->contiene, $this->ideal,$this->evalor,
+		 $this->vAnaquel, $this->tempcong, $this->apint, $this->apext, $this->color, $this->olor,$this->sabor, $this->reconstitucion,
+		 $this->epqpri, $this->epqsec, $this->codpri, $this->codsec, $this->pallet, $this->cmanejo, '0')";
+
+		if(!$result = $db->query($sql)){
+    		die('There was an error running the query [' . $db->error . ']');
+		}
+
 	}
 }
 ?>
