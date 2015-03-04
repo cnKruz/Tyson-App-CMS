@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tyson App CMS</title>
+	 <link rel="stylesheet" href="/tysonapp/FancySlidingForm/css/style.css" type="text/css" media="screen"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="/tysonapp/FancySlidingForm/sliding.form.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+<div id="content">
+<div id="wrapper">
+<div id="steps">
+<form id="formElem" action="/PHP/service.php" method="get" accept-charset="utf-8">
+	<fieldset class="step">
+		<legend>Producto</legend>
+		<p>
+			<label for="cName">Nombre:</label>
+			<input type="text" name="cName" value="" placeholder="">
+		</p>
+		<p>
+			<label for="cDesc">Descripcion:</label>
+			<textarea name="cDesc" cols="150" rows="5"></textarea>
+		</p>
+		<!--p>
+			<label for="cImg">Descripcion:</label>
+			<textarea name="cImg" cols="150" rows="5"></textarea>
+		</p-->
+	</fieldset>	
+	<fieldset class="step">
+		<legend>Confirmar</legend>
+		<p class="submit">
+        	<button id="registerButton" type="submit">Register</button>
+        </p>
+	</fieldset>
+</form>
+</div>
+<div id="navigation" style="display:none;">
+                    <ul>
+                        <li class="selected">
+                            <a href="#">Categoria</a>
+                        </li>
+                        <li>
+                        	<a href="#">Confirmar</a>
+                        </li>
+                    
+                    </ul>
+                </div>
+	
+</div>
+</div>
+</body>
+</html>

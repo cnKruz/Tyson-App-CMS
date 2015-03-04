@@ -1,7 +1,9 @@
 <?php
 include_once("producto.class.php");
-
+include_once("categoria.class.php");
 	//$mysqli = new mysqli("ejemplo.com", "usuario", "contraseña", "basedatos");
+
+if(strcmp($_REQUEST["fType"], "producto"){
 
 
 	$producto= new Producto();
@@ -30,7 +32,17 @@ include_once("producto.class.php");
 	$producto->set_constitucion($_REQUEST["pMetRec"]);
 
 	$producto->saveNewProduct();
-	//function saveNewProducto()
-	//{
-	//}
+
+}
+else if(strcmp($_REQUEST["fType"], "categoria"){
+	$categoria=new categoria();
+
+	$categoria->set_nombre($_REQUEST["cName"]);
+	$categoria->set_descripcion($_REQUEST["cDesc"]);
+	$categoria->set_imagen(null);
+
+	$categoria->saveNewCategory();
+
+}
+
 ?>
