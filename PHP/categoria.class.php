@@ -1,10 +1,9 @@
 <?php
-class Producto {
-	var $id;
-	var $nombre;
-	var $descripcion;
-	var $imagen;
-	var $reconstitucion;
+class Categoria {
+	public $id;
+	public $nombre;
+	public $descripcion;
+	public $imagen;
 
 	public function set_id($id){
 		$this->id = $id;
@@ -29,12 +28,12 @@ class Producto {
 		$mysqli=new mysqli($server, $user, $pass, $database);
 		
 		$sql ="INSERT INTO `multimh2_tysonapp`.`categorias` (`id_cat`, `nombre`, `descripcion`, `imagen`) 
-		VALUES ('', $this->nombre, $this->descripcion,$this->imagen)";
-
-		if(!$result = $db->query($sql)){
-    		die('There was an error running the query [' . $db->error . ']');
+		VALUES ('', '$this->nombre', '$this->descripcion','$this->imagen')";
+		echo $sql;
+		if(!$mysqli->query($sql)){
+    		die('There was an error running the query [' . $mysqli->error . ']');
 		}
-
+		$mysqli->close();
 	}
 }
 ?>

@@ -10,10 +10,11 @@
 <div id="content">
 <div id="wrapper">
 <div id="steps">
-<form id="formElem" action="/PHP/service.php" method="get" accept-charset="utf-8">
+<form id="formElem" action="/tysonapp/PHP/service.php" method="post" accept-charset="utf-8">
 	<fieldset class="step">
 		<legend>Producto</legend>
 		<p>
+			<input type="hidden" name="fType" value="categoria">
 			<label for="cName">Nombre:</label>
 			<input type="text" name="cName" value="" placeholder="">
 		</p>
