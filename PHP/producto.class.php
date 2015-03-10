@@ -1,28 +1,29 @@
 <?php
 class Producto {
-	var $id;
-	var $codigo;
-	var $nombre;
-	var $descripcion;
-	var $peso;
-	var $ingredientes;
-	var $contiene;
-	var $ideal;
-	var $evalor;
-	var $epqpri;
-	var $epqsec;
-	var $codpri;
-	var $codsec;
-	var $pallet;
-	var $cmanejo;
-	var $vanaquel;
-	var $tempcong;
-	var $apint;
-	var $apext;
-	var $color;
-	var $olor;
-	var $sabor;
-	var $reconstitucion;
+	public $id;
+	public $codigo;
+	public $nombre;
+	public $descripcion;
+	public $peso;
+	public $ingredientes;
+	public $contiene;
+	public $ideal;
+	public $evalor;
+	public $epqpri;
+	public $epqsec;
+	public $codpri;
+	public $codsec;
+	public $pallet;
+	public $cmanejo;
+	public $vanaquel;
+	public $tempcong;
+	public $apint;
+	public $apext;
+	public $color;
+	public $olor;
+	public $sabor;
+	public $reconstitucion;
+	public $categoria;
 
 	public function set_id($id){
 		$this->id = $id;
@@ -93,6 +94,9 @@ class Producto {
 	public function set_constitucion($constitucion){
 		$this->reconstitucion=$constitucion;
 	}
+	public function set_categoria($categoria){
+		$this->categoria=$categoria;
+	}
 
 	public function saveNewProduct(){
 		$server="localhost";
@@ -109,11 +113,13 @@ class Producto {
 		VALUES 
 		('', '$this->nombre' , '$this->descripcion', '$this->codigo', '$this->peso', '$this->ingredientes', '$this->contiene', 'this->ideal','$this->evalor',
 		 '$this->vAnaquel', '$this->tempcong', '$this->apint', '$this->apext', '$this->color', '$this->olor', '$this->sabor', '$this->reconstitucion',
-		 '$this->epqpri', '$this->epqsec', '$this->codpri', '$this->codsec', '$this->pallet', '$this->cmanejo', '0')";
+		 '$this->epqpri', '$this->epqsec', '$this->codpri', '$this->codsec', '$this->pallet', '$this->cmanejo', '$this->categoria')";
 
-		if(!$result = $db->query($sql)){
-    		die('There was an error running the query [' . $db->error . ']');
+		if(!$result = $mysqli->query($sql)){
+    		die('There was an error running the query [' . $mysqli->error . ']');
 		}
+
+		$mysqli->close();
 
 	}
 }

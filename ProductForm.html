@@ -5,6 +5,23 @@
 	 <link rel="stylesheet" href="/tysonapp/FancySlidingForm/css/style.css" type="text/css" media="screen"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	<script src="/tysonapp/FancySlidingForm/sliding.form.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+			url:'/tysonapp/PHP/categorias.php',
+			type:'post',
+			success:function(response){
+				//console.log(response);
+				response=JSON.parse(response);
+				$.each(response,function(i,item){
+					//console.log(item.id_cat);
+					$('<option>').val(item.id_cat).text(item.nombre).appendTo('#pCat');
+				});
+			}
+
+		});
+	});
+	</script>
 </head>
 <body>
 <div id="content">
@@ -28,7 +45,9 @@
 		</p>
 		<p>
 			<label for="pCat">Categoria:</label>
-			<select name="pCat"></select>
+			<select name="pCat" id="pCat">
+				<option value="">--Categoria</option>
+			</select>
 		</p>
 	</fieldset>	
 	<fieldset class="step">

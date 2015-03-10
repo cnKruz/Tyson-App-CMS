@@ -16,8 +16,8 @@
 		$rawdata = array();
 		while($row = $result->fetch_array(MYSQLI_ASSOC))
     	{
-       		$rawdata[$i] = $row;
-       	 	$i++;
+       		$rawdata[] = $row;
+       	 	//$i++;
     	}
     	
     	$mysqli->close(); //desconectamos la base de datos

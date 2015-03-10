@@ -41,9 +41,11 @@ else if(strcmp($_REQUEST["fType"], "producto")==0){
 	$producto->set_olor($_REQUEST["pOlor"]);
 	$producto->set_sabor($_REQUEST["pSabor"]);
 	$producto->set_constitucion($_REQUEST["pMetRec"]);
+	$producto->set_categoria($_REQUEST["pCat"]);
+	var_dump($producto)
+	//$producto->saveNewProduct();
 
-	$producto->saveNewProduct();
-	header('Location: ../CategoryForm.html');
+	//header('Location: ../CategoryForm.html');
 
 }
 
