@@ -95,7 +95,7 @@ class Producto {
 	}
 
 	public function saveNewProduct(){
-		$server="162.144.32.74";
+		$server="localhost";
 		$user="multimh2_tysnusr";
 		$pass="Tyson4pp2015";
 		$database="multimh2_tysonapp";
@@ -107,9 +107,9 @@ class Producto {
 		 `vidaanaquel`, `temperaturacongelacion`, `aparienciainterna`, `aparienciaexterna`, `color`, `olor`, `sabor`, `metodosderecostitucion`,
 		  `empaqueprimario`, `empaquesecundario`, `codificacionprimaria`, `codificacionsecundaria`, `pallet`, `condicionesmanejo`, `categoria`) 
 		VALUES 
-		('', $this->nombre , $this->descripcion, $this->codigo,$this->peso, $this->ingredientes, $this->contiene, $this->ideal,$this->evalor,
-		 $this->vAnaquel, $this->tempcong, $this->apint, $this->apext, $this->color, $this->olor,$this->sabor, $this->reconstitucion,
-		 $this->epqpri, $this->epqsec, $this->codpri, $this->codsec, $this->pallet, $this->cmanejo, '0')";
+		('', '$this->nombre' , '$this->descripcion', '$this->codigo', '$this->peso', '$this->ingredientes', '$this->contiene', 'this->ideal','$this->evalor',
+		 '$this->vAnaquel', '$this->tempcong', '$this->apint', '$this->apext', '$this->color', '$this->olor', '$this->sabor', '$this->reconstitucion',
+		 '$this->epqpri', '$this->epqsec', '$this->codpri', '$this->codsec', '$this->pallet', '$this->cmanejo', '0')";
 
 		if(!$result = $db->query($sql)){
     		die('There was an error running the query [' . $db->error . ']');

@@ -20,7 +20,7 @@ class Categoria {
 	}
 	
 	public function saveNewCategory(){
-		$server="162.144.32.74";
+		$server="localhost";
 		$user="multimh2_tysnusr";
 		$pass="Tyson4pp2015";
 		$database="multimh2_tysonapp";
@@ -29,7 +29,8 @@ class Categoria {
 		
 		$sql ="INSERT INTO `multimh2_tysonapp`.`categorias` (`id_cat`, `nombre`, `descripcion`, `imagen`) 
 		VALUES ('', '$this->nombre', '$this->descripcion','$this->imagen')";
-		echo $sql;
+		
+		//echo $sql;
 		if(!$mysqli->query($sql)){
     		die('There was an error running the query [' . $mysqli->error . ']');
 		}
