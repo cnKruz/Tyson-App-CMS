@@ -62,7 +62,7 @@ class Producto {
 		$this->codpri=$codPrim;
 	}
 	public function set_codSecundaria($codSecundaria){
-		$this->codSecundaria=$codSecundaria;
+		$this->codsec=$codSecundaria;
 	}
 	public function set_pallet($pallet){
 		$this->pallet=$pallet;
@@ -111,11 +111,13 @@ class Producto {
 		 `vidaanaquel`, `temperaturacongelacion`, `aparienciainterna`, `aparienciaexterna`, `color`, `olor`, `sabor`, `metodosderecostitucion`,
 		  `empaqueprimario`, `empaquesecundario`, `codificacionprimaria`, `codificacionsecundaria`, `pallet`, `condicionesmanejo`, `categoria`) 
 		VALUES 
-		('', '$this->nombre' , '$this->descripcion', '$this->codigo', '$this->peso', '$this->ingredientes', '$this->contiene', 'this->ideal','$this->evalor',
-		 '$this->vAnaquel', '$this->tempcong', '$this->apint', '$this->apext', '$this->color', '$this->olor', '$this->sabor', '$this->reconstitucion',
+		('', '$this->nombre' , '$this->descripcion', '$this->codigo', '$this->peso', '$this->ingredientes', '$this->contiene', '$this->ideal','$this->evalor',
+		 '$this->vanaquel', '$this->tempcong', '$this->apint', '$this->apext', '$this->color', '$this->olor', '$this->sabor', '$this->reconstitucion',
 		 '$this->epqpri', '$this->epqsec', '$this->codpri', '$this->codsec', '$this->pallet', '$this->cmanejo', '$this->categoria')";
 
-		if(!$result = $mysqli->query($sql)){
+		//echo $sql;
+
+		if(!$mysqli->query($sql)){
     		die('There was an error running the query [' . $mysqli->error . ']');
 		}
 

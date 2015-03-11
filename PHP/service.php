@@ -16,8 +16,9 @@ if(strcmp($_REQUEST["fType"], "categoria")== 0){
 	header('Location: ../CategoryForm.html');
 }
 else if(strcmp($_REQUEST["fType"], "producto")==0){
-// 	echo "producto";
-	$producto= new Producto();
+ 	//echo "producto";
+	 $producto= new Producto();
+	 //var_dump($producto);
 
 	$producto->set_codigo($_REQUEST["pCodigo"]);
 	$producto->set_nombre($_REQUEST["pName"]);
@@ -42,13 +43,11 @@ else if(strcmp($_REQUEST["fType"], "producto")==0){
 	$producto->set_sabor($_REQUEST["pSabor"]);
 	$producto->set_constitucion($_REQUEST["pMetRec"]);
 	$producto->set_categoria($_REQUEST["pCat"]);
-	var_dump($producto)
-	//$producto->saveNewProduct();
+	//var_dump($producto);
+	$producto->saveNewProduct();
 
-	//header('Location: ../CategoryForm.html');
+	header('Location: ../ProductForm.html');
 
 }
-
-
 
 ?>
